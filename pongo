@@ -1,0 +1,8 @@
+FROM rickmark/build-aarch64-none-elf
+
+RUN apt install -y lzma
+
+RUN cd /opt; wget https://github.com/sbingner/llvm-project/releases/download/v10.0.0-1/linux-ios-arm64e-clang-toolchain.tar.lzma; mv linux-ios-arm64e-clang-toolchain.tar.lzma linux-ios-arm64e-clang-toolchain.tar.xz; xz -d linux-ios-arm64e-clang-toolchain.tar.xz; tar xvf linux-ios-arm64e-clang-toolchain.tar
+
+
+ENV PATH="/opt/ios-arm64e-clang-toolchain/bin:${PATH}"
