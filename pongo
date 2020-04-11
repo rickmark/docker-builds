@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt -y update; apt -y upgrade
-RUN apt -y install automake make autoconf git wget tar xz-utils lzma libtinfo5
+RUN apt -y install automake make autoconf git wget tar xz-utils lzma libtinfo5 xxd
 
 RUN mkdir -p /opt
 
